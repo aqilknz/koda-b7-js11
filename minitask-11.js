@@ -13,13 +13,13 @@
 // })
 
 
-// const promise = (username, time) => {
-//     new Promise((resolve, reject) => {
-//         setTimeout(() => {
-//             username
-//     }, time);
-//   });
-// };
+const promise = (username, time) => {
+    new Promise((resolve, reject) => {
+        setTimeout(() => {
+            username
+    }, time);
+  });
+};
 
 // const John = () => {
 //     new Promise((resolve, _) => {
