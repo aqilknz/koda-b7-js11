@@ -1,45 +1,28 @@
-
-// function showName(name, time) {
-    
-//     setTimeout (function () {
-    
-//     })
-// }
-
-// const showName = new Promise ((resolve,reject) => {
-//     let name= ""
-//     let time = 0
-//     if 
-// })
-
-
-const promise = (username, time) => {
-    new Promise((resolve, reject) => {
+// promise
+const showName = (username, time) => {
+    return new Promise((resolve) => {
         setTimeout(() => {
-            username
+            console.log(username);
+            resolve();
     }, time);
   });
 };
 
-// const John = () => {
-//     new Promise((resolve, _) => {
-//         setTimeout(() => resolve('John'), 1500);
-//     })
-//     .then(result => console.log(result))
-//     .catch(error => console.error(error));
-// }
-showName
-    .then(value => {
-        console.log
-    })
+// then-catch
+showName("John", 1500)
+    .then(() => showName("Ed", 2000))
+    .then(() => showName("Jane", 500))
+    .catch((err) => {
+        console.log (err)
+    });
 
-const runProgram = async () => {
-  try {
-    await showName("John", 1500);
-    await showName("Ed", 2000);
-    await showName("Jane", 500);
-    
-  } catch (err) {
-    console.log("Error:", err);
-  }
-};
+// try-catch
+(async () => {
+    try {
+        await showName("John", 1500);
+        await showName("Ed", 2000);
+        await showName("Jane", 500);
+    } catch (err) {
+        console.log("Error:", err);
+    }
+})();
